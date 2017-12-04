@@ -17,11 +17,12 @@ public class MessageResources {
 	MessageService messageservice= new MessageService();
 	
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
 	public List<Messages> getMessages() {
 		
 		return messageservice.getAllMessages();
 	}
+	
 	
 	
 
