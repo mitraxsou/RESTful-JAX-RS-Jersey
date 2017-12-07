@@ -5,7 +5,7 @@ import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Messages {
+public class Message {
 	private long id;
 	private String msg;
 	private Date created;
@@ -13,13 +13,13 @@ public class Messages {
 	
 	
 	
-	public Messages() {
+	public Message() {
 		//no op constructor
 	}
 	
 	//cheat
 	
-	public Messages(long id, String msg, String author) {
+	public Message(long id, String msg, String author) {
 		
 		this.id=id;
 		this.msg=msg;
@@ -43,8 +43,8 @@ public class Messages {
 	public Date getCreated() {
 		return created;
 	}
-	public void setCreated(Date created) {
-		this.created = created;
+	public void setCreated() {
+		this.created = new Date();
 	}
 	public String getAuthor() {
 		return author;
