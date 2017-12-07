@@ -51,7 +51,7 @@ public class Profile {
 		return created;
 	}
 	public void setCreated(Date created) {
-		this.created = created;
+		this.created = new Date();
 	}
 	
 
