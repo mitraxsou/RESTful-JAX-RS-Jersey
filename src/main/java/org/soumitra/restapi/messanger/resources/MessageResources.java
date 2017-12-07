@@ -24,6 +24,8 @@ public class MessageResources {
 		return messageservice.getAllMessages();
 	}
 	
+	
+	
 	@Path("/{messageId}")
 	@GET
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
