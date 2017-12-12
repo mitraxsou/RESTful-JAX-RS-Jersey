@@ -12,7 +12,6 @@ public class Message {
 	private String author;
 	
 	
-	
 	public Message() {
 		//no op constructor
 	}

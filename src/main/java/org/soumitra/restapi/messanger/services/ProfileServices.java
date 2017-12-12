@@ -21,5 +21,14 @@ public class ProfileServices {
 		return new ArrayList<>(profiles.values());
 	}
 	
+	public Profile getProfile( String profileName) {
+		return  profiles.get(profileName);
+	}
+	public Profile addProfile(Profile profile) {
+		
+		profile.setId(profiles.size()+1);
+		profiles.put(profile.getProfilename(), profile);
+		return profile;
+	}
 
 }

@@ -5,7 +5,9 @@ import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -26,5 +28,21 @@ public class ProfileResources {
 		return  profileservices.getAllProfiles();
 		
 	}
+	
+	@GET
+	@Path("/{profileName}")
+	public Profile getProfile(@PathParam ("profileName") String profileName ) {
+		
+		return profileservices.getProfile(profileName);
+	}
+	
+	@POST
+	public Profile postProfile(Profile profile) {
+		
+		return profileservices.addProfile(profile);
+	}
+	
+	
+	
 
 }

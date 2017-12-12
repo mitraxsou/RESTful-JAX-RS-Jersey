@@ -28,6 +28,7 @@ public class MessageResources {
 		return messageservice.getAllMessages();
 	}
 	
+   
 	
 	
 //	@Path("/{messageId}")
